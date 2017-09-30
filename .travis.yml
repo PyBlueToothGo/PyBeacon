@@ -24,10 +24,8 @@ install:
   # git describe requires complete history
   # - travis_retry git fetch --unshallow
   - python setup.py install
-
 script: 
-  - python helpTest.py | grep Bat-belt
-  - pytest
+  - python helpTest.py | grep PyBeacon
   
 after_success:
   - echo "OK, all done."
@@ -38,4 +36,5 @@ notifications:
       - ralic.lo.eng@ieee.org
     on_success: always # default: change
     on_failure: never # default: always
+
 
